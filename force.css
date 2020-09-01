@@ -1,0 +1,43 @@
+circle.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+line.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+
+body {
+	width: 96%;
+	height: 100vh;
+	background-color: #050c15;
+	color: white;
+}
+
+p {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #005aff;
+}
+
+img {
+	width: 80%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+h3,h1 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+#btm {
+	padding-bottom: 50px;
+}
+

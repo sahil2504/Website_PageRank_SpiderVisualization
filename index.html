@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SAHIL MISHRA</title>
+    <script type="text/javascript" src="d3.v2.js"></script>
+    <script type="text/javascript" src="spider.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link type="text/css" rel="stylesheet" href="force.css"/>
+  </head>
+  <body style="font-family: sans-serif;">
+    <h1>SRM University webpage links Spider Visualisation</h1>
+    <script>
+        document.write("<p>Starting url: "+"<a href='https://www.srmist.edu.in'>"+spiderJson.nodes[0].url+"</a> has "+spiderJson.nodes[0].weight+" inbound links"+"</p>");
+    </script>
+    <div id="chart" style="border:1px; background-image: url('vortex.jpg'); background-size: 100%"></div>
+    <script type="text/javascript" src="force.js"></script>
+	<p>If you don't see a chart above, check the JavaScript console. You may
+	need to use a different browser.</p>
+  <h3 id="link" style="font-size:2vw;">Source : <a href="https://github.com/sahil2504/Website_PageRank_SpiderVisualization">https://github.com/sahil2504/Website_PageRank_SpiderVisualization</a></h3>
+  <p>Initially a Python program runs and asks you to enter an URL and how many pages you want to retrieve from that URL. Then the Python program crawls a web site and pulls a series of pages into the database, recording all the URLs in a table named Pages with Values id, url, parsed(HTML) and sets the default rank of all URLs as 1.0, then it computes links between URLs and enters in a table named links which inludes every URL from Pages table and the id of the URLs they link to. Then once we have enough number of webpages in the database then another Python program runs to compute the ranking of these retrieved webpages based on the inbound and outboound links present on each of these webpages. The rank algorithm uses the link structure of the web pages to find the page rank.</p>
+  <img src="pagestb.jpg">
+  <h3>Pages Table</h3>
+  <img src="linkstb.jpg">
+  <h3>Links Table</h3>
+  <p>Then aother Python program runs to fetch the data from the database and create a JSON data file which can be read by the HTML for visualization.</p>
+  <img src="json.jpg">
+  <p id="btm">Finally This HTML shows an automatic layout of the nodes and links using d3.py SVG. You can click and drag any node and you can also double click on a node to find the URL that is represented by the node.</p>
+  </body>
+</html>
